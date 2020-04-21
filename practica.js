@@ -7,20 +7,19 @@ let usuario = prompt('¿cuál es tu peso?');
 let peso = Number(usuario);
 
 if(pregunta === "marte") {
-    peso_final = usuario * grav_marte / grav_tierra;
-    peso_final = parseInt(peso_final)
-    document.write(`tu peso en marte es de: ${peso_final} kilogramos`);
+    peso_final = parseInt(usuario * grav_marte / grav_tierra);
 }
 else if (pregunta === "jupiter") {
-    peso_final = usuario * grav_jupiter / grav_tierra;
-    peso_final = parseInt(peso_final);
-    document.write(`tu peso en jupiter es de: ${peso_final} kilogramos`)
+    peso_final = parseInt(usuario * grav_jupiter / grav_tierra);
 }
 
-else {
+document.write(`tu peso en ${pregunta} es de ${peso_final} kilogramos`)
+
+/* else {
     peso_final = grav_jupiter * 1000;
     peso_final = Number(peso_final)
     document.write(`tu peso en otro planeta es de ${peso_final} kilogramos ¡Cerdo!`);
 }
 
+*/
 
