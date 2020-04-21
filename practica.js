@@ -8,17 +8,23 @@ let peso = Number(usuario);
 
 if(pregunta === "marte") {
     peso_final = parseInt(usuario * grav_marte / grav_tierra);
-    document.write(`tu peso en marte es de: ${peso_final} kilogramos`);
 }
 else if (pregunta === "jupiter") {
     peso_final = parseInt(usuario * grav_jupiter / grav_tierra);
-    document.write(`tu peso en jupiter es de: ${peso_final} kilogramos`)
 }
 
 else {
+    pregunta = "krypton";
+    peso_final = 1000000;
+}
+
+document.write(`tu peso en ${pregunta} es de ${peso_final} kilogramos`)
+
+/* else {
     peso_final = grav_jupiter * 1000;
     peso_final = Number(peso_final)
     document.write(`tu peso en otro planeta es de ${peso_final} kilogramos ¡Cerdo!`);
 }
 
+*/
 
