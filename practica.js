@@ -1,5 +1,5 @@
 // -------- Canva
-
+/*
 let d = document.getElementById("dibujito");
 let lienzo = d.getContext('2d'); 
 let lineas = 30;
@@ -27,4 +27,8 @@ function dibujarLinea(color, xinicial, yinicial, xfinal, yfinal) {
     lienzo.lineTo(xfinal, yfinal);
     lienzo.stroke();
     lienzo.closePath();
+}*/
+
+for (hashtag = "#"; hashtag.length < 8; hashtag += "#") {
+    console.log(hashtag);
 }
