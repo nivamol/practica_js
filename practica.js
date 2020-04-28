@@ -29,9 +29,16 @@ function dibujarLinea(color, xinicial, yinicial, xfinal, yfinal) {
     lienzo.closePath();
 }*/
 
-let a = Number(prompt('Digite un numero:')); 
-let b = Number(prompt('Digite otro numero:'));
+let a = Number(prompt('Digite el primer número:')); 
+let b = Number(prompt('Digite el segundo número:'));
+let c = Number(prompt('Digite el tercer número:'));
 
-let c = a + b; 
-
-document.write(`El resultado de la suma es: ${c}`);
+if (a > b && a > c) {
+    document.write('a es mayor');
+}
+else if (b > a && b > c) {
+    document.write('b es mayor');
+}
+else {
+    document.write('c es mayor');
+}
