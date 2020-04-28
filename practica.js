@@ -29,18 +29,9 @@ function dibujarLinea(color, xinicial, yinicial, xfinal, yfinal) {
     lienzo.closePath();
 }*/
 
-let size = 8; 
-let board = "";
+let a = Number(prompt('Digite un numero:')); 
+let b = Number(prompt('Digite otro numero:'));
 
-for (let y = 0; y <= size; y++) {
-    for( let x = 0; x <= size; x++) {
-        if((x + y) % 2 == 0) {
-            board += " ";
-        }
-        else{
-            board += "#";
-        }
-    }
-    board += "\n";
-}
-console.log(board);
+let c = a + b; 
+
+document.write(`El resultado de la suma es: ${c}`);
