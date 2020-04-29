@@ -29,16 +29,9 @@ function dibujarLinea(color, xinicial, yinicial, xfinal, yfinal) {
     lienzo.closePath();
 }*/
 
-let a = Number(prompt('Digite el primer número:')); 
-let b = Number(prompt('Digite el segundo número:'));
-let c = Number(prompt('Digite el tercer número:'));
+let cat1 = Number(prompt("Escriba el valor del primer cateto:"));
+let cat2 = Number(prompt("Escriba el valor del segundo cateto:"));
+let hipot = cat1 + cat2; 
 
-if (a > b && a > c) {
-    document.write('a es mayor');
-}
-else if (b > a && b > c) {
-    document.write('b es mayor');
-}
-else {
-    document.write('c es mayor');
-}
+document.write(`la hipotenusa del triangulo es: ${hipot}`);
+
