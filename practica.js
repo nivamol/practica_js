@@ -29,9 +29,23 @@ function dibujarLinea(color, xinicial, yinicial, xfinal, yfinal) {
     lienzo.closePath();
 }*/
 
-let cat1 = Number(prompt("Escriba el valor del primer cateto:"));
+/* let cat1 = Number(prompt("Escriba el valor del primer cateto:"));
 let cat2 = Number(prompt("Escriba el valor del segundo cateto:"));
 let hipot = cat1 + cat2; 
 
-document.write(`la hipotenusa del triangulo es: ${hipot}`);
+document.write(`la hipotenusa del triangulo es: ${hipot}`); */
 
+let d = document.getElementById("dibujito")
+let lienzo = d.getContext("2d");
+
+function dibujarLinea(color, xinicial, yinicial, xfinal, yfinal) {
+    lienzo.beginPath();
+    lienzo.strokeStyle = color;
+    lienzo.moveTo(xinicial, yinicial);
+    lienzo.lineTo(xfinal, yfinal);
+    lienzo.stroke();
+    lienzo.closePath();
+}
+
+dibujarLinea("black", 10, 300, 220, 10);
+dibujarLinea("blue", 13, 200, 240, 20);
