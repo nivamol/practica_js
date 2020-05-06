@@ -90,3 +90,26 @@ document.write(`la hipotenusa del triangulo es: ${hipot}`); */
 // }
 
 
+// ----------------------- Fundamentos JS Curso platzi
+
+let nombre = "nicolas"; 
+let numero = 1;
+
+nombre.toLowerCase(); // var nombre en minúscula
+
+nombre.toUpperCase(); // var nombre en mayúscula
+
+nombre.length; // numero de carácteres de la variable nombre
+
+document.write(nombre.substr(1, 5)); // caracteres que queremos que nos devuelta, en 
+                                    // este caso nos devuelve = "icola"
+
+document.write(numero += numero); // incremento
+
+document.write(numero -= numero); // decremento 
+
+let decimal = 30.4
+
+let total = Math.round(decimal * 100 * 4) / 100;
+
+console.log(total);
