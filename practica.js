@@ -152,7 +152,7 @@ if (persona == "nicolas") {
 // ----> Curso_fundamentos_platzi__Objetos
 
 
-let nicolas = {
+/* let nicolas = {
     nombre: "nicolas",
     apellido: "valencia",
     edad: 23
@@ -163,11 +163,23 @@ function cumpleaños(edad) {
     edad += 1; // no incrementa la edad
 }
 
-cumpleaños(nicolas);
+cumpleaños(nicolas); */
 
 
+/* function puedeVotar() {
+    let nombre = prompt('ingrese su nombre');
+    let edad = Number(prompt('ingrese su edad'));
+
+    if (edad >= 18) {
+        document.write(`${nombre} puede votar`)
+    } else {
+        document.write(`${nombre} no puede votar`)
+    }
+}
+
+puedeVotar(); */
 
 
-
+// ----> Arrow functions
 
 
