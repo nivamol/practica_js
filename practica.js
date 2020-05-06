@@ -92,7 +92,7 @@ document.write(`la hipotenusa del triangulo es: ${hipot}`); */
 
 // ----------------------- Fundamentos JS Curso platzi
 
-let nombre = "nicolas"; 
+/*let nombre = "nicolas"; 
 let numero = 1;
 
 nombre.toLowerCase(); // var nombre en minúscula
@@ -112,4 +112,16 @@ let decimal = 30.4
 
 let total = Math.round(decimal * 100 * 4) / 100;
 
-console.log(total);
+console.log(total); */
+
+let nombre = "nicolas", apellido = "valencia", edad = 23; // variables de alcance global
+
+function imprimirEdad() {
+    let cantidad = "años"; // variable de alcance local solo para la función imprimirEdad
+    document.write(`me llamo ${nombre} ${apellido} y tengo ${edad} años`);
+    console.log(cantidad); // aquí si muestra el resultado años
+}
+
+console.log(cantidad); // aquí la variable cantidad sale no definida 
+
+imprimirEdad();
