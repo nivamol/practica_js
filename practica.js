@@ -114,7 +114,7 @@ let total = Math.round(decimal * 100 * 4) / 100;
 
 console.log(total); */
 
-let nombre = "nicolas", apellido = "valencia", edad = 23; // variables de alcance global
+/* let nombre = "nicolas", apellido = "valencia", edad = 23; // variables de alcance global
 
 function imprimirEdad() {
     let cantidad = "años"; // variable de alcance local solo para la función imprimirEdad
@@ -124,4 +124,32 @@ function imprimirEdad() {
 
 console.log(cantidad); // aquí la variable cantidad sale no definida 
 
-imprimirEdad();
+imprimirEdad(); */
+
+let persona = prompt('Ingrese su nombre')
+let nicolas = { nombre: "nicolas", apellido: "Valencia", edad: 22 }
+let valeria = { nombre: "valeria", apellido: "salazar", edad: 27 }
+let camilo = { nombre: "camilo", apellido: "Valencia", edad: 23 }
+
+function responderSaludo() 
+{
+    document.write(`buen día ${persona.nombre} ${persona.apellido}`)
+}
+
+if (persona == "nicolas") {
+    console.log(`buen día ${persona}`);
+} else if (persona == "valeria")
+{
+    console.log(`buen día ${persona}`);
+} else if (persona == "camilo") {
+    console.log(`buen día ${persona}`)
+}
+
+
+
+
+
+
+
+
+
