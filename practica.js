@@ -126,6 +126,8 @@ console.log(cantidad); // aquí la variable cantidad sale no definida
 
 imprimirEdad(); */
 
+/* 
+
 let persona = prompt('Ingrese su nombre')
 let nicolas = { nombre: "nicolas", apellido: "Valencia", edad: 22 }
 let valeria = { nombre: "valeria", apellido: "salazar", edad: 27 }
@@ -145,7 +147,23 @@ if (persona == "nicolas") {
     console.log(`buen día ${persona}`)
 }
 
+*/
 
+// ----> Curso_fundamentos_platzi__Objetos
+
+
+let nicolas = {
+    nombre: "nicolas",
+    apellido: "valencia",
+    edad: 23
+}
+
+function cumpleaños(edad) {
+    nicolas.edad += 1; // la edad incrementa 1 
+    edad += 1; // no incrementa la edad
+}
+
+cumpleaños(nicolas);
 
 
 
