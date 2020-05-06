@@ -35,17 +35,58 @@ let hipot = cat1 + cat2;
 
 document.write(`la hipotenusa del triangulo es: ${hipot}`); */
 
-let d = document.getElementById("dibujito")
-let lienzo = d.getContext("2d");
 
-function dibujarLinea(color, xinicial, yinicial, xfinal, yfinal) {
-    lienzo.beginPath();
-    lienzo.strokeStyle = color;
-    lienzo.moveTo(xinicial, yinicial);
-    lienzo.lineTo(xfinal, yfinal);
-    lienzo.stroke();
-    lienzo.closePath();
-}
+// let number = Number(prompt('Escriba un numero mayor que 0'));
 
-dibujarLinea("black", 10, 300, 220, 10);
-dibujarLinea("blue", 13, 200, 240, 20);
+// if (!Number.isNaN(number)) 
+// {
+//     console.log(`la raíz cuadrada de ${number} es ${number * number}`);
+// }
+// else if (number !== Number) {
+//     console.log('escribe un numero');
+// }
+
+// let number = 0; 
+
+// while(number <= 20) {
+//     console.log(number);
+//     number = number + 2;
+// }
+
+
+// while(contador < 10) {
+//     console.log(numero);
+//     numero = numero * 2;
+//     contador = contador + 1;
+// }
+
+// let numero = 1; 
+
+// for (contador = 0; contador < 10; contador++) {
+//     console.log(numero);
+//     numero = numero * 2; 
+// }
+
+// for (let numero = 1; numero < 12; numero +=2) {
+//     console.log(numero);
+// }
+
+
+// switch (prompt('¿Cuál es el clima actual?')) {
+//     case "lluvioso":
+//         document.write('recuerde llevar sombrilla');
+//         break;
+    
+//     case "caluroso": 
+//         document.write('Sal con ropa fresca');
+//         break; 
+
+//     case "nublado": 
+//         document.write('Lleva chaqueta');
+//         break;
+
+//     default:
+//         document.write('No te entiendo, escoge entre lluvioso, caluroso o nublado');
+// }
+
+
