@@ -183,23 +183,23 @@ puedeVotar(); */
 // ----> Arrow functions
 
 
-let nicolas = {
-    nombre: "nicolas",
-    apellido: "valencia",
-    edad: 23
-}
+// let nicolas = {
+//     nombre: "nicolas",
+//     apellido: "valencia",
+//     edad: 23
+// }
 
-let camilo = {
-    nombre: "camilo",
-    apellido: "ortiz",
-    edad: 17
-}
+// let camilo = {
+//     nombre: "camilo",
+//     apellido: "ortiz",
+//     edad: 17
+// }
 
-let valeria = {
-    nombre: "valeria",
-    apellido: "solorzano",
-    edad: 25
-}
+// let valeria = {
+//     nombre: "valeria",
+//     apellido: "solorzano",
+//     edad: 25
+// }
 
 /* ----> función normal 
 
@@ -213,7 +213,7 @@ let mayoria = funcion(persona) {
 
 
 
-const mayoriaDeEdad = 18;
+/* const mayoriaDeEdad = 18;
 
 const mayoria =  ({edad}) =>  edad >= mayoriaDeEdad; 
                              // al ser una variable con función es bueno indicarla como constante
@@ -256,3 +256,35 @@ esMayorDeEdad(camilo);
 permitirAcceso(camilo);
 esMayorDeEdad(valeria);
 permitirAcceso(valeria);
+
+*/
+
+let nicolas = {
+    nombre: "nicolas",
+    apellido: "valencia",
+    edad: 23,
+    peso: 75
+} 
+
+console.log(`al inicio del año ${nicolas.nombre} pesa ${nicolas.peso} KG`);
+
+const variacionPeso = 0.2;
+
+const AUMENTAR_PESO = persona => persona.peso += variacionPeso;
+
+const ADELGAZAR = persona => persona.peso -= variacionPeso;
+
+const DIAS_DEL_AÑO = 365;
+
+for (let i = 1; i <= DIAS_DEL_AÑO; i++) {
+    let random = Math.random()
+    
+    if (random < 0.25) {
+        AUMENTAR_PESO(nicolas);
+    }
+    else if (random < 0.5) {
+        ADELGAZAR(nicolas);
+    }
+}
+
+console.log(`al final del año ${nicolas.nombre} pesó ${nicolas.peso.toFixed(1)} KG`);
