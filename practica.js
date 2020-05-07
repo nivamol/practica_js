@@ -183,3 +183,41 @@ puedeVotar(); */
 // ----> Arrow functions
 
 
+let nicolas = {
+    nombre: "nicolas",
+    apellido: "valencia",
+    edad: 23
+}
+
+let camilo = {
+    nombre: "camilo",
+    apellido: "ortiz",
+    edad: 17
+}
+
+let valeria = {
+    nombre: "valeria",
+    apellido: "solorzano",
+    edad: 25
+}
+
+const mayoriaDeEdad = 18;
+
+let mayoria = function (persona) {
+    return persona.edad >= mayoriaDeEdad;
+}
+
+    function esMayorDeEdad(persona) { // Le asignamos una función a una variable.
+    if(mayoria(persona))
+     {
+        console.log(`${persona.nombre} es mayor de edad`)
+    }
+    else 
+    {
+        console.log(`${persona.nombre} es menor de edad.`)
+    }
+}
+
+esMayorDeEdad(nicolas);
+esMayorDeEdad(camilo);
+esMayorDeEdad(valeria);
