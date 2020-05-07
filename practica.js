@@ -223,6 +223,7 @@ const mayoria =  ({edad}) =>  edad >= mayoriaDeEdad;
                               // Desestructuramos persona con ({edad}) y elegimos el parametro edad
                               // eliminamos el persona.edad -> a solo edad. 
 
+
 function esMayorDeEdad(persona) { 
     if(mayoria(persona)) 
      {
@@ -234,13 +235,18 @@ function esMayorDeEdad(persona) {
     }
 }
 
+
+const mayorEdad = ({edad}) => edad >= mayoriaDeEdad; 
+const menorEdad = ({edad}) => edad < mayoriaDeEdad;
+
 function permitirAcceso(persona) {
-    if (!mayoria(persona)) // usamos la negación con ! no mayoria = no es mayor de edad. 
+    if(mayorEdad(persona)) 
     {
-        console.log('Acceso Denegado')
-    } 
-    else {
-        console.log('acceso Permitido')
+        console.log("acceso permitido");
+    }
+    else if (menorEdad(persona))
+    {
+        console.log("acceso denegado");
     }
 }
 
