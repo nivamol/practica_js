@@ -201,14 +201,30 @@ let valeria = {
     edad: 25
 }
 
-const mayoriaDeEdad = 18;
+/* ----> función normal 
 
-let mayoria = function (persona) {
-    return persona.edad >= mayoriaDeEdad;
+let mayoria = funcion(persona) {
+    persona.edad >= mayoriaDeEdad
 }
 
-    function esMayorDeEdad(persona) { // Le asignamos una función a una variable.
-    if(mayoria(persona))
+*/
+
+// función normal convertida en arrow function.
+
+
+
+const mayoriaDeEdad = 18;
+
+const mayoria =  ({edad}) =>  edad >= mayoriaDeEdad; 
+                             // al ser una variable con función es bueno indicarla como constante
+                              // borramos la palabra function, agregamos la flecha.
+                              // cuando hay un solo parametro se pueden quitar los parentesis
+                              // si la función solo retorna algo se pueden borrar llaves y return.
+                              // Desestructuramos persona con ({edad}) y elegimos el parametro edad
+                              // eliminamos el persona.edad -> a solo edad. 
+
+function esMayorDeEdad(persona) { 
+    if(mayoria(persona)) 
      {
         console.log(`${persona.nombre} es mayor de edad`)
     }
@@ -218,6 +234,19 @@ let mayoria = function (persona) {
     }
 }
 
+function permitirAcceso(persona) {
+    if (!mayoria(persona)) // usamos la negación con ! no mayoria = no es mayor de edad. 
+    {
+        console.log('Acceso Denegado')
+    } 
+    else {
+        console.log('acceso Permitido')
+    }
+}
+
 esMayorDeEdad(nicolas);
+permitirAcceso(nicolas);
 esMayorDeEdad(camilo);
+permitirAcceso(camilo);
 esMayorDeEdad(valeria);
+permitirAcceso(valeria);
