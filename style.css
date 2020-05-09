@@ -3,8 +3,6 @@
     position: relative;
     height: 100vh;/*-- controlar el scroll --*/
 }
-
-
 .contenedor div {
     width: 100px;
     height: 100px;
@@ -26,3 +24,21 @@ div.caja5 {
     top: 0;
     right: 87.1%;
 }
+
+/* -- Media queries -- */
+
+@media screen and (condicion) {}
+
+Mobile First: min = desde.
+
+@media screen and (min-width: 320px) {}
+@media screen and (min-width: 480px) {}
+@media screen and (min-width: 768px) {}
+@media screen and (min-width: 1024px) {}
+
+Desktop first: max = hasta.
+
+@media screen and (max-width: 1024px) {}
+@media screen and (max-width: 768px) {}
+@media screen and (max-width: 480px) {}
+@media screen and (max-width: 320px) {}
