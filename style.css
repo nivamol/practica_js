@@ -24,3 +24,15 @@ div.caja5 {
     top: 0;
     right: 87.1%;
 }
+
+/* after y before - Pseudoelementos para añadir elementos visuales. */
+
+div.caja5::before {
+    content: ".";
+    color: yellow;   
+}
+
+div.caja5::after {
+    content: ".";
+    color: yellow;   
+}
