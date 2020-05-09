@@ -1,5 +1,6 @@
 .contenedor {
     width: 100%;
+    position: relative;
     height: 100vh;/*-- controlar el scroll --*/
 }
 
@@ -19,5 +20,7 @@ div.caja3 {
 
 div.caja5 {
     background-color: blue;
-    opacity: 0.5; /* -- Opacar elementos - recibe valores de 0 a 1 -- */
+    position: absolute;
+    top: 0;
+    right: 87.1%;
 }
