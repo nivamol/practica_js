@@ -1,39 +1,13 @@
 .contenedor {
-    display: grid;
-    grid-template-columns: ;
-    grid-template-rows: ;
-    grid-template: repeat(3, 33.3%)/ repeat(2, 50%); /* -- filas / columnas */
-    grid-template: [columna1]1fr [colum2]2fr; /* nombrar columnas o filas*/
-    grid-template-areas: ""; /* -- definir la ubicación de cada area del grid. */
-    grid-auto-flow: ; /* -- manejar el grid implicito -- */
-    grid-gap: ; /* -- establecer margen del grid container -- */
     width: 100%;
     height: 100vh;
-    margin: 0 auto; /* centrado */
-
-    /* 
-        Alinear filas y columnas
-
-        valores: start-end-center-stretch / space around/ space between / space-evenly;
-    */
-    justify-items: ;
-    align-items: ;
-
-    /* 
-        Alinear contenido 
-        
-        valores: start-end-center-stretch / space around/ space between / space-evenly;
-    */
-
-    justify-content: ;
-    align-content: ;
+    overflow: hidden; /*-- controlar el scroll --*/
 }
 
 .contenedor div {
-    width: 100%;
-    height: 300px;
+    width: 100px;
+    height: 100px;
     border: 1px solid black;
-    grid-area: ; /*-- definir el nombre del area para incluir en template-areas */
 }
 
 div.caja1 {
@@ -42,5 +16,5 @@ div.caja1 {
 
 div.caja5 {
     background-color: blue;
-    grid-column: 3; /*-- indicar al elemento donde posicionarse -- */
+    height: 500px;
 }
