@@ -4,6 +4,7 @@
     height: 100vh;/*-- controlar el scroll --*/
 }
 
+
 .contenedor div {
     width: 100px;
     height: 100px;
@@ -15,7 +16,8 @@ div.caja1 {
 }
 
 div.caja3 {
-
+    box-shadow: 10px 10px 10px 10px black; /* -- agregar sombras */
+    margin: 20px;
 }
 
 div.caja5 {
@@ -23,16 +25,4 @@ div.caja5 {
     position: absolute;
     top: 0;
     right: 87.1%;
-}
-
-/* after y before - Pseudoelementos para añadir elementos visuales. */
-
-div.caja5::before {
-    content: ".";
-    color: yellow;   
-}
-
-div.caja5::after {
-    content: ".";
-    color: yellow;   
 }
