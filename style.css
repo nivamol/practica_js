@@ -1,12 +1,21 @@
 .contenedor {
-    display: inline;
-    display: grid;
-    display: flex;
-    display: block;
+    position: relative;
+    position: absolute;
+    position: static;
+    position: sticky;
+    position: fixed;
 }
 
 .contenedor div {
-    width: 400px;
-    height: 400px;
+    width: 100vw;
+    height: 200px;
     border: 1px solid black;
+}
+
+div.caja1 {
+    background-color: green;
+}
+
+div.caja5 {
+    background-color: blue;
 }
