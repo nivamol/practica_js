@@ -1,36 +1,39 @@
 .contenedor {
-    display: flex;
-    width: 100vh;
+    display: grid;
+    grid-template-columns: ;
+    grid-template-rows: ;
+    grid-template: repeat(3, 33.3%)/ repeat(2, 50%); /* -- filas / columnas */
+    grid-template: [columna1]1fr [colum2]2fr; /* nombrar columnas o filas*/
+    grid-template-areas: ""; /* -- definir la ubicación de cada area del grid. */
+    grid-auto-flow: ; /* -- manejar el grid implicito -- */
+    grid-gap: ; /* -- establecer margen del grid container -- */
+    width: 100%;
     height: 100vh;
-    flex-direction: column; /* valores: column o row(default) */
     margin: 0 auto; /* centrado */
 
-    /* ---> justify content */
-    justify-content: center;
-    justify-content: space-evenly;
-    justify-content: space-around;
-    justify-content: space-between;
-    justify-content: baseline;
-    justify-content: stretch;
-    justify-content: flex-start;
-    justify-content: flex-end;
+    /* 
+        Alinear filas y columnas
 
-    justify-self: ;
+        valores: start-end-center-stretch / space around/ space between / space-evenly;
+    */
+    justify-items: ;
+    align-items: ;
 
-    /* ----> align items */
+    /* 
+        Alinear contenido 
+        
+        valores: start-end-center-stretch / space around/ space between / space-evenly;
+    */
 
-    align-items: center;
-    align-items: flex-end;
-    align-items: flex-start;
-    align-items: stretch;
-
-    align-self: ;
+    justify-content: ;
+    align-content: ;
 }
 
 .contenedor div {
-    width: 100px;
-    height: 100px;
+    width: 100%;
+    height: 300px;
     border: 1px solid black;
+    grid-area: ; /*-- definir el nombre del area para incluir en template-areas */
 }
 
 div.caja1 {
@@ -39,4 +42,5 @@ div.caja1 {
 
 div.caja5 {
     background-color: blue;
+    grid-column: 3; /*-- indicar al elemento donde posicionarse -- */
 }
