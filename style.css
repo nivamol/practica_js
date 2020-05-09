@@ -14,10 +14,10 @@ div.caja1 {
 }
 
 div.caja3 {
-    visibility: hidden; /* -- nos permite ocultar elementos sin ignorar la posición del resto de elementos-- */
+
 }
 
 div.caja5 {
     background-color: blue;
-    height: 500px;
+    opacity: 0.5; /* -- Opacar elementos - recibe valores de 0 a 1 -- */
 }
