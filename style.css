@@ -1,7 +1,6 @@
 .contenedor {
     width: 100%;
-    height: 100vh;
-    overflow: hidden; /*-- controlar el scroll --*/
+    height: 100vh;/*-- controlar el scroll --*/
 }
 
 .contenedor div {
@@ -12,6 +11,10 @@
 
 div.caja1 {
     background-color: green;
+}
+
+div.caja3 {
+    visibility: hidden; /* -- nos permite ocultar elementos sin ignorar la posición del resto de elementos-- */
 }
 
 div.caja5 {
