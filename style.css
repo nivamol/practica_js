@@ -1,14 +1,35 @@
 .contenedor {
-    position: relative;
-    position: absolute;
-    position: static;
-    position: sticky;
-    position: fixed;
+    display: flex;
+    width: 100vh;
+    height: 100vh;
+    flex-direction: column; /* valores: column o row(default) */
+    margin: 0 auto; /* centrado */
+
+    /* ---> justify content */
+    justify-content: center;
+    justify-content: space-evenly;
+    justify-content: space-around;
+    justify-content: space-between;
+    justify-content: baseline;
+    justify-content: stretch;
+    justify-content: flex-start;
+    justify-content: flex-end;
+
+    justify-self: ;
+
+    /* ----> align items */
+
+    align-items: center;
+    align-items: flex-end;
+    align-items: flex-start;
+    align-items: stretch;
+
+    align-self: ;
 }
 
 .contenedor div {
-    width: 100vw;
-    height: 200px;
+    width: 100px;
+    height: 100px;
     border: 1px solid black;
 }
 
