@@ -394,9 +394,20 @@ let buscarNombre = articulos.find(function(articulo){
 */
 
 // ---- For each 
-
+/*
 articulos.forEach(function(articulo){
     console.log(articulo.nombre)
 })
+*/
+
+// ---- some 
+/*
+let articulosValidos = articulos.some(function(articulo){
+    return articulo.costo <= 400
+})
+
+console.log(articulosValidos);
+
+*/
 
 
