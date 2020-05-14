@@ -258,13 +258,9 @@ esMayorDeEdad(valeria);
 permitirAcceso(valeria);
 
 */
-<<<<<<< HEAD
-/*
-=======
 
 
 /* ------ Estructura for
->>>>>>> curso_fund_javascript
 
 let nicolas = {
     nombre: "nicolas",
@@ -297,6 +293,8 @@ for (let i = 1; i <= DIAS_DEL_AÑO; i++) {
 console.log(`al final del año ${nicolas.nombre} pesó ${nicolas.peso.toFixed(1)} KG`);
 
 */
+
+/*
 
 let nicolas = {
     nombre: "nicolas",
@@ -342,3 +340,15 @@ while (nicolas.peso > META) {
 }
 
 console.log(`pasaron ${dias} dias para que ${nicolas.nombre} adelgazara 3KG`);
+
+*/
+
+let auto = {
+    marca: "toyota",
+    modelo: "corolla",
+    annio: 2019,
+    detalle: function() {
+        console.log(`el auto es un ${this.marca} ${this.modelo} del año ${this.annio}`)
+    }
+}
+
