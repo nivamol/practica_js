@@ -370,7 +370,16 @@ let articulos = [
     {nombre: "cargador", costo: 100},
 ]; 
 
+// ---- filter
+/*
 let articulosFiltrados = articulos.filter(function(articulo){
     return articulo.costo <= 400
 });
+
+*/
+
+let nombreArticulos = articulos.map(function(articulo) {
+    return articulo.nombre
+});
+
 
