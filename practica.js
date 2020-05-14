@@ -378,8 +378,19 @@ let articulosFiltrados = articulos.filter(function(articulo){
 
 */
 
+// ---- map 
+/*
 let nombreArticulos = articulos.map(function(articulo) {
     return articulo.nombre
 });
+*/
+
+// ---- find
+
+let buscarNombre = articulos.find(function(articulo){
+    return articulo.nombre === "macbook"
+})
+
+console.log(buscarNombre);
 
 
