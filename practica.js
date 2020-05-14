@@ -258,7 +258,13 @@ esMayorDeEdad(valeria);
 permitirAcceso(valeria);
 
 */
+<<<<<<< HEAD
 /*
+=======
+
+
+/* ------ Estructura for
+>>>>>>> curso_fund_javascript
 
 let nicolas = {
     nombre: "nicolas",
@@ -292,5 +298,47 @@ console.log(`al final del año ${nicolas.nombre} pesó ${nicolas.peso.toFixed(1)
 
 */
 
+let nicolas = {
+    nombre: "nicolas",
+    apellido: "valencia",
+    edad: 23,
+    peso: 75
+} 
 
 
+let valeria = {
+    nombre: "valeria",
+    apellido: "valencia",
+    edad: 24,
+    peso: 65
+} 
+
+
+const variacionPeso = 0.3;
+
+const AUMENTAR_PESO = persona => persona.peso += variacionPeso;
+
+const ADELGAZAR = persona => persona.peso -= variacionPeso;
+
+const COME_MUCHO = () => Math.random() < 0.3;
+
+const REALIZA_DEPORTE = () => Math.random() < 0.4;
+
+
+
+const DIAS_DEL_AÑO = 365;
+
+const META = nicolas.peso - 3; 
+
+let dias = 0; 
+
+while (nicolas.peso > META) {
+    if (COME_MUCHO) {
+        AUMENTAR_PESO(nicolas);
+    } if (REALIZA_DEPORTE){
+        ADELGAZAR(nicolas);
+    }
+    dias += 1;
+}
+
+console.log(`pasaron ${dias} dias para que ${nicolas.nombre} adelgazara 3KG`);
