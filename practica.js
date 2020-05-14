@@ -387,10 +387,16 @@ let nombreArticulos = articulos.map(function(articulo) {
 
 // ---- find
 
+/*
 let buscarNombre = articulos.find(function(articulo){
     return articulo.nombre === "macbook"
 })
+*/
 
-console.log(buscarNombre);
+// ---- For each 
+
+articulos.forEach(function(articulo){
+    console.log(articulo.nombre)
+})
 
 
