@@ -354,12 +354,23 @@ console.log(`pasaron ${dias} dias para que ${nicolas.nombre} adelgazara 3KG`);
 
 
 
-function auto(marca, modelo, annio) {
-    this.marca = marca; 
-    this.model = modelo;
-    this.annio = annio;
-}
+// function auto(marca, modelo, annio) {
+//     this.marca = marca; 
+//     this.model = modelo;
+//     this.annio = annio;
+// }
 
-let autoNuevo = new auto ("volkswagen", "golf gti", 2020); 
+// let autoNuevo = new auto ("volkswagen", "golf gti", 2020); 
 
+
+let articulos = [
+    {nombre: "bici", costo: 200},
+    {nombre: "macbook", costo: 1000},
+    {nombre: "monitor", costo: 500},
+    {nombre: "cargador", costo: 100},
+]; 
+
+let articulosFiltrados = articulos.filter(function(articulo){
+    return articulo.costo <= 400
+});
 
