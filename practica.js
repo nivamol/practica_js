@@ -343,12 +343,23 @@ console.log(`pasaron ${dias} dias para que ${nicolas.nombre} adelgazara 3KG`);
 
 */
 
-let auto = {
-    marca: "toyota",
-    modelo: "corolla",
-    annio: 2019,
-    detalle: function() {
-        console.log(`el auto es un ${this.marca} ${this.modelo} del año ${this.annio}`)
-    }
+// let auto = {
+//     marca: "toyota",
+//     modelo: "corolla",
+//     annio: 2019,
+//     detalle: function() {
+//         console.log(`el auto es un ${this.marca} ${this.modelo} del año ${this.annio}`)
+//     }
+// }
+
+
+
+function auto(marca, modelo, annio) {
+    this.marca = marca; 
+    this.model = modelo;
+    this.annio = annio;
 }
+
+let autoNuevo = new auto ("volkswagen", "golf gti", 2020); 
+
 
