@@ -340,10 +340,25 @@ console.log(`al final del año ${nicolas.nombre} pesó ${nicolas.peso.toFixed(1)
 // console.log(`pasaron ${dias} dias para que ${nicolas.nombre} adelgazara 3KG`);
 
 
-let edad = Number(prompt("¿Cuál es su edad?"))
+// let edad = Number(prompt("¿Cuál es su edad?"))
 
-if (edad >= 18) {
-    document.write('Usted es mayor de edad, puede votar');
+// if (edad >= 18) {
+//     document.write('Usted es mayor de edad, puede votar');
+// } else {
+//     document.write('Anda por el tetero mocoso');
+// }
+
+let i = 0;
+
+const llueve = () => Math.random() < 0.25
+
+do {
+    i++
+} while (!llueve()); // -> si esta condición se cumple el código do se vuelve a ejecutar
+
+if (i === 1) {
+    console.log(`llovió ${i} vez`);
 } else {
-    document.write('Anda por el tetero mocoso');
+    console.log(`fui a ver si llovía ${i} veces`);
 }
+
