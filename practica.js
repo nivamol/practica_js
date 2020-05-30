@@ -418,12 +418,36 @@ let julian = {
 
 let personas = [nicolas, camilo, silvio, beatriz, julian];
 
-for (i= 0; i <= personas.length; i++) {
-    let persona = personas[i];
-    console.log(`${persona.nombre} mide ${persona.estatura} mts`)
-}
+/* ----- Mismas funciones escritas diferente ----- */
 
+/* ---- Función normal
 
+const esAlta = function(personas) {
+    return personas.estatura >= 1.80;
+} 
+
+-------  arrow function v1
+
+const esAlta = (personas) => {
+    return personas.estatura >= 1.80;
+} 
+
+-------  arrow function v2 */
+
+// const esAlta = personas => personas.estatura >= 1.80;
+
+// ---- Desglosando la variable personas: 
+
+const esAlta = ({estatura}) => estatura >= 1.80
+
+console.log(personas.filter(esAlta));
+
+// versión 2 de encontrar estos filtrados de información: 
+
+// let personaAlta = personas.filter(function(personas) { // normalmente la función es anónima
+//     return personas.estatura >= 180;
+// })
+// console.log(personaAlta);
 // para acceder a los arrays usamos -> nombre_variable[0] = accede a nicolas. 
 // podemos acceder a los atributos con un . al inicio del atributo  -> personas[0].estatura
 // podemos acceder a los atributos con los corchetes -> personas[0]['estatura']
