@@ -381,6 +381,9 @@ switch(prompt('¿Cuál es su signo zodiacal?')) {
     case "GEMINIS":
     document.write('Aproveche su sensación optimista para iniciar cualquier actividad que haya postergado hace tiempo. De esta forma, estimulará su creatividad al máximo.')
     break;
+
+    default: 
+    document.write('Digita un signo sodiacal válido')
 }
 
 
