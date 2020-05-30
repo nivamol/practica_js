@@ -442,6 +442,10 @@ const esAlta = ({estatura}) => estatura >= 1.80
 
 console.log(personas.filter(esAlta));
 
+
+const esBaja = ({estatura}) => estatura < 1.80; 
+
+console.log(personas.filter(esBaja));
 // versión 2 de encontrar estos filtrados de información: 
 
 // let personaAlta = personas.filter(function(personas) { // normalmente la función es anónima
