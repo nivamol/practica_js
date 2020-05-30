@@ -348,17 +348,39 @@ console.log(`al final del año ${nicolas.nombre} pesó ${nicolas.peso.toFixed(1)
 //     document.write('Anda por el tetero mocoso');
 // }
 
-let i = 0;
+// let i = 0;
 
-const llueve = () => Math.random() < 0.25
+// const llueve = () => Math.random() < 0.25
 
-do {
-    i++
-} while (!llueve()); // -> si esta condición se cumple el código do se vuelve a ejecutar
+// do {
+//     i++
+// } while (!llueve()); // -> si esta condición se cumple el código do se vuelve a ejecutar
 
-if (i === 1) {
-    console.log(`llovió ${i} vez`);
-} else {
-    console.log(`fui a ver si llovía ${i} veces`);
+// if (i === 1) {
+//     console.log(`llovió ${i} vez`);
+// } else {
+//     console.log(`fui a ver si llovía ${i} veces`);
+// }
+
+
+switch(prompt('¿Cuál es su signo zodiacal?')) {
+    case "aries":
+    case "Aries":
+    case "ARIES":
+    document.write('Aprenda que no conseguirá nada si no empieza a luchar por lo que quiere. No se agote en el intento, siempre los resultados justifican los esfuerzos.')
+    break; 
+
+    case "tauro": 
+    case "Tauro":
+    case "TAURO":
+    document.write('Momento para sedimentar todas sus energías puramente en los proyectos. De esta forma, evitará caer en engaños y no lamentará lo perdido.')
+    break;
+
+    case "geminis": 
+    case "Geminis":
+    case "GEMINIS":
+    document.write('Aproveche su sensación optimista para iniciar cualquier actividad que haya postergado hace tiempo. De esta forma, estimulará su creatividad al máximo.')
+    break;
 }
+
 
