@@ -363,27 +363,67 @@ console.log(`al final del año ${nicolas.nombre} pesó ${nicolas.peso.toFixed(1)
 // }
 
 
-switch(prompt('¿Cuál es su signo zodiacal?')) {
-    case "aries":
-    case "Aries":
-    case "ARIES":
-    document.write('Aprenda que no conseguirá nada si no empieza a luchar por lo que quiere. No se agote en el intento, siempre los resultados justifican los esfuerzos.')
-    break; 
+// switch(prompt('¿Cuál es su signo zodiacal?')) {
+//     case "aries":
+//     case "Aries":
+//     case "ARIES":
+//     document.write('Aprenda que no conseguirá nada si no empieza a luchar por lo que quiere. No se agote en el intento, siempre los resultados justifican los esfuerzos.')
+//     break; 
 
-    case "tauro": 
-    case "Tauro":
-    case "TAURO":
-    document.write('Momento para sedimentar todas sus energías puramente en los proyectos. De esta forma, evitará caer en engaños y no lamentará lo perdido.')
-    break;
+//     case "tauro": 
+//     case "Tauro":
+//     case "TAURO":
+//     document.write('Momento para sedimentar todas sus energías puramente en los proyectos. De esta forma, evitará caer en engaños y no lamentará lo perdido.')
+//     break;
 
-    case "geminis": 
-    case "Geminis":
-    case "GEMINIS":
-    document.write('Aproveche su sensación optimista para iniciar cualquier actividad que haya postergado hace tiempo. De esta forma, estimulará su creatividad al máximo.')
-    break;
+//     case "geminis": 
+//     case "Geminis":
+//     case "GEMINIS":
+//     document.write('Aproveche su sensación optimista para iniciar cualquier actividad que haya postergado hace tiempo. De esta forma, estimulará su creatividad al máximo.')
+//     break;
 
-    default: 
-    document.write('Digita un signo sodiacal válido')
+//     default: 
+//     document.write('Digita un signo sodiacal válido')
+// }
+
+let nicolas = {
+    nombre: "Nicolás",
+    apellido: "Valencia",
+    estatura: 1.75
+};
+
+let camilo = {
+    nombre: "Camilo",
+    apellido: "Valencia",
+    estatura: 1.80
+}
+
+let silvio = {
+    nombre: "Silvio",
+    apellido: "Valencia",
+    estatura: 1.82
+}
+
+let beatriz = {
+    nombre: "Beatriz",
+    apellido: "Molina",
+    estatura: 1.65
+}
+
+let julian = {
+    nombre: "Julian",
+    apellido: "Cañas",
+    estatura: 1.78
+}
+
+let personas = [nicolas, camilo, silvio, beatriz, julian];
+
+for (i= 0; i <= personas.length; i++) {
+    let persona = personas[i];
+    console.log(`${persona.nombre} mide ${persona.estatura} mts`)
 }
 
 
+// para acceder a los arrays usamos -> nombre_variable[0] = accede a nicolas. 
+// podemos acceder a los atributos con un . al inicio del atributo  -> personas[0].estatura
+// podemos acceder a los atributos con los corchetes -> personas[0]['estatura']
