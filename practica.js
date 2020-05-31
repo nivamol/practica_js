@@ -438,14 +438,15 @@ const esAlta = (personas) => {
 
 // ---- Desglosando la variable personas: 
 
-const esAlta = ({estatura}) => estatura >= 1.80
+// const esAlta = ({estatura}) => estatura >= 1.80
 
-console.log(personas.filter(esAlta));
+// console.log(personas.filter(esAlta));
 
 
-const esBaja = ({estatura}) => estatura < 1.80; 
+// const esBaja = ({estatura}) => estatura < 1.80; 
 
-console.log(personas.filter(esBaja));
+// console.log(personas.filter(esBaja));
+
 // versión 2 de encontrar estos filtrados de información: 
 
 // let personaAlta = personas.filter(function(personas) { // normalmente la función es anónima
@@ -455,3 +456,18 @@ console.log(personas.filter(esBaja));
 // para acceder a los arrays usamos -> nombre_variable[0] = accede a nicolas. 
 // podemos acceder a los atributos con un . al inicio del atributo  -> personas[0].estatura
 // podemos acceder a los atributos con los corchetes -> personas[0]['estatura']
+
+// let personasCms = personas.map(function (personas) {
+//     return personas.estatura * 100;
+// })
+
+// ó 
+
+const personasACentimetros = personas => {
+    personas.estatura *= 100
+    return personas
+};
+
+let personasACms = personas.map(personasACentimetros)
+
+console.log(personasACms);
