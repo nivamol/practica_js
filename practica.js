@@ -511,9 +511,8 @@ let julian = {
 
 let personas = [nicolas, camilo, silvio, beatriz, julian];
 
-const reducer = (acum, personas) => {
-    return acum = acum + personas.cantidadDeLibros
-}
+const reducer = (acum, {cantidadDeLibros}) => acum + cantidadDeLibros
+
 
 let totalDeLibros = personas.reduce(reducer, 0) // como parametros recibe una función (reducer) y el valor inicla del acumulador (0).
 
