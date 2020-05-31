@@ -386,37 +386,37 @@ console.log(`al final del año ${nicolas.nombre} pesó ${nicolas.peso.toFixed(1)
 //     document.write('Digita un signo sodiacal válido')
 // }
 
-let nicolas = {
-    nombre: "Nicolás",
-    apellido: "Valencia",
-    estatura: 1.75
-};
+// let nicolas = {
+//     nombre: "Nicolás",
+//     apellido: "Valencia",
+//     estatura: 1.75
+// };
 
-let camilo = {
-    nombre: "Camilo",
-    apellido: "Valencia",
-    estatura: 1.80
-}
+// let camilo = {
+//     nombre: "Camilo",
+//     apellido: "Valencia",
+//     estatura: 1.80
+// }
 
-let silvio = {
-    nombre: "Silvio",
-    apellido: "Valencia",
-    estatura: 1.82
-}
+// let silvio = {
+//     nombre: "Silvio",
+//     apellido: "Valencia",
+//     estatura: 1.82
+// }
 
-let beatriz = {
-    nombre: "Beatriz",
-    apellido: "Molina",
-    estatura: 1.65
-}
+// let beatriz = {
+//     nombre: "Beatriz",
+//     apellido: "Molina",
+//     estatura: 1.65
+// }
 
-let julian = {
-    nombre: "Julian",
-    apellido: "Cañas",
-    estatura: 1.78
-}
+// let julian = {
+//     nombre: "Julian",
+//     apellido: "Cañas",
+//     estatura: 1.78
+// }
 
-let personas = [nicolas, camilo, silvio, beatriz, julian];
+// let personas = [nicolas, camilo, silvio, beatriz, julian];
 
 /* ----- Mismas funciones escritas diferente ----- */
 
@@ -463,12 +463,58 @@ const esAlta = (personas) => {
 
 // ó 
 
-const personasACentimetros = personas => ({
-    ...personas,
-    estatura: personas.estatura * 100
-}); // como solo retorna un objeto podemos envolver las llaves dentro de los parentesis y colocar la condición eliminando la palabra return.
+// const personasACentimetros = personas => ({
+//     ...personas,
+//     estatura: personas.estatura * 100
+// }); // como solo retorna un objeto podemos envolver las llaves dentro de los parentesis y colocar la condición eliminando la palabra return.
 
-let personasACms = personas.map(personasACentimetros)
+// let personasACms = personas.map(personasACentimetros)
 
-console.log(personas[0]);
-console.log(personasACms[0]); // Se creó otro array con la estatura en cms sin modificar el original en metros.
+// console.log(personas[0]);
+// console.log(personasACms[0]); // Se creó otro array con la estatura en cms sin modificar el original en metros.
+
+
+let nicolas = {
+    nombre: "Nicolás",
+    apellido: "Valencia",
+    estatura: 1.75,
+    cantidadDeLibros: 27
+};
+
+let camilo = {
+    nombre: "Camilo",
+    apellido: "Valencia",
+    estatura: 1.80,
+    cantidadDeLibros: 60
+}
+
+let silvio = {
+    nombre: "Silvio",
+    apellido: "Valencia",
+    estatura: 1.82,
+    cantidadDeLibros: 70
+}
+
+let beatriz = {
+    nombre: "Beatriz",
+    apellido: "Molina",
+    estatura: 1.65,
+    cantidadDeLibros: 89
+}
+
+let julian = {
+    nombre: "Julian",
+    apellido: "Cañas",
+    estatura: 1.78,
+    cantidadDeLibros: 100
+}
+
+let personas = [nicolas, camilo, silvio, beatriz, julian];
+
+let acum = 0; 
+
+for(let i = 0; i < personas.length; i++) {
+    acum = acum + personas[i].cantidadDeLibros
+}
+
+console.log(`en total todos tienen ${acum} libros`)
