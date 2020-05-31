@@ -463,11 +463,12 @@ const esAlta = (personas) => {
 
 // ó 
 
-const personasACentimetros = personas => {
-    personas.estatura *= 100
-    return personas
-};
+const personasACentimetros = personas => ({
+    ...personas,
+    estatura: personas.estatura * 100
+}); // como solo retorna un objeto podemos envolver las llaves dentro de los parentesis y colocar la condición eliminando la palabra return.
 
 let personasACms = personas.map(personasACentimetros)
 
-console.log(personasACms);
+console.log(personas[0]);
+console.log(personasACms[0]); // Se creó otro array con la estatura en cms sin modificar el original en metros.
