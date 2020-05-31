@@ -511,10 +511,10 @@ let julian = {
 
 let personas = [nicolas, camilo, silvio, beatriz, julian];
 
-let acum = 0; 
-
-for(let i = 0; i < personas.length; i++) {
-    acum = acum + personas[i].cantidadDeLibros
+const reducer = (acum, personas) => {
+    return acum = acum + personas.cantidadDeLibros
 }
 
-console.log(`en total todos tienen ${acum} libros`)
+let totalDeLibros = personas.reduce(reducer, 0) // como parametros recibe una función (reducer) y el valor inicla del acumulador (0).
+
+console.log(`en total todos tienen ${totalDeLibros} libros`);
