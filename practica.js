@@ -294,120 +294,226 @@ console.log(`al final del año ${nicolas.nombre} pesó ${nicolas.peso.toFixed(1)
 
 */
 
-/*
+// let nicolas = {
+//     nombre: "nicolas",
+//     apellido: "valencia",
+//     edad: 23,
+//     peso: 75
+// } 
+
+
+// let valeria = {
+//     nombre: "valeria",
+//     apellido: "valencia",
+//     edad: 24,
+//     peso: 65
+// } 
+
+
+// const variacionPeso = 0.3;
+
+// const AUMENTAR_PESO = persona => persona.peso += variacionPeso;
+
+// const ADELGAZAR = persona => persona.peso -= variacionPeso;
+
+// const COME_MUCHO = () => Math.random() < 0.3;
+
+// const REALIZA_DEPORTE = () => Math.random() < 0.4;
+
+
+
+// const DIAS_DEL_AÑO = 365;
+
+// const META = nicolas.peso - 3; 
+
+// let dias = 0; 
+
+// while (nicolas.peso > META) {
+//     if (COME_MUCHO) {
+//         AUMENTAR_PESO(nicolas);
+//     } if (REALIZA_DEPORTE){
+//         ADELGAZAR(nicolas);
+//     }
+//     dias += 1;
+// }
+
+// console.log(`pasaron ${dias} dias para que ${nicolas.nombre} adelgazara 3KG`);
+
+
+// let edad = Number(prompt("¿Cuál es su edad?"))
+
+// if (edad >= 18) {
+//     document.write('Usted es mayor de edad, puede votar');
+// } else {
+//     document.write('Anda por el tetero mocoso');
+// }
+
+// let i = 0;
+
+// const llueve = () => Math.random() < 0.25
+
+// do {
+//     i++
+// } while (!llueve()); // -> si esta condición se cumple el código do se vuelve a ejecutar
+
+// if (i === 1) {
+//     console.log(`llovió ${i} vez`);
+// } else {
+//     console.log(`fui a ver si llovía ${i} veces`);
+// }
+
+
+// switch(prompt('¿Cuál es su signo zodiacal?')) {
+//     case "aries":
+//     case "Aries":
+//     case "ARIES":
+//     document.write('Aprenda que no conseguirá nada si no empieza a luchar por lo que quiere. No se agote en el intento, siempre los resultados justifican los esfuerzos.')
+//     break; 
+
+//     case "tauro": 
+//     case "Tauro":
+//     case "TAURO":
+//     document.write('Momento para sedimentar todas sus energías puramente en los proyectos. De esta forma, evitará caer en engaños y no lamentará lo perdido.')
+//     break;
+
+//     case "geminis": 
+//     case "Geminis":
+//     case "GEMINIS":
+//     document.write('Aproveche su sensación optimista para iniciar cualquier actividad que haya postergado hace tiempo. De esta forma, estimulará su creatividad al máximo.')
+//     break;
+
+//     default: 
+//     document.write('Digita un signo sodiacal válido')
+// }
+
+// let nicolas = {
+//     nombre: "Nicolás",
+//     apellido: "Valencia",
+//     estatura: 1.75
+// };
+
+// let camilo = {
+//     nombre: "Camilo",
+//     apellido: "Valencia",
+//     estatura: 1.80
+// }
+
+// let silvio = {
+//     nombre: "Silvio",
+//     apellido: "Valencia",
+//     estatura: 1.82
+// }
+
+// let beatriz = {
+//     nombre: "Beatriz",
+//     apellido: "Molina",
+//     estatura: 1.65
+// }
+
+// let julian = {
+//     nombre: "Julian",
+//     apellido: "Cañas",
+//     estatura: 1.78
+// }
+
+// let personas = [nicolas, camilo, silvio, beatriz, julian];
+
+/* ----- Mismas funciones escritas diferente ----- */
+
+/* ---- Función normal
+
+const esAlta = function(personas) {
+    return personas.estatura >= 1.80;
+} 
+
+-------  arrow function v1
+
+const esAlta = (personas) => {
+    return personas.estatura >= 1.80;
+} 
+
+-------  arrow function v2 */
+
+// const esAlta = personas => personas.estatura >= 1.80;
+
+// ---- Desglosando la variable personas: 
+
+// const esAlta = ({estatura}) => estatura >= 1.80
+
+// console.log(personas.filter(esAlta));
+
+
+// const esBaja = ({estatura}) => estatura < 1.80; 
+
+// console.log(personas.filter(esBaja));
+
+// versión 2 de encontrar estos filtrados de información: 
+
+// let personaAlta = personas.filter(function(personas) { // normalmente la función es anónima
+//     return personas.estatura >= 180;
+// })
+// console.log(personaAlta);
+// para acceder a los arrays usamos -> nombre_variable[0] = accede a nicolas. 
+// podemos acceder a los atributos con un . al inicio del atributo  -> personas[0].estatura
+// podemos acceder a los atributos con los corchetes -> personas[0]['estatura']
+
+// let personasCms = personas.map(function (personas) {
+//     return personas.estatura * 100;
+// })
+
+// ó 
+
+// const personasACentimetros = personas => ({
+//     ...personas,
+//     estatura: personas.estatura * 100
+// }); // como solo retorna un objeto podemos envolver las llaves dentro de los parentesis y colocar la condición eliminando la palabra return.
+
+// let personasACms = personas.map(personasACentimetros)
+
+// console.log(personas[0]);
+// console.log(personasACms[0]); // Se creó otro array con la estatura en cms sin modificar el original en metros.
+
 
 let nicolas = {
-    nombre: "nicolas",
-    apellido: "valencia",
-    edad: 23,
-    peso: 75
-} 
+    nombre: "Nicolás",
+    apellido: "Valencia",
+    estatura: 1.75,
+    cantidadDeLibros: 27
+};
 
-
-let valeria = {
-    nombre: "valeria",
-    apellido: "valencia",
-    edad: 24,
-    peso: 65
-} 
-
-
-const variacionPeso = 0.3;
-
-const AUMENTAR_PESO = persona => persona.peso += variacionPeso;
-
-const ADELGAZAR = persona => persona.peso -= variacionPeso;
-
-const COME_MUCHO = () => Math.random() < 0.3;
-
-const REALIZA_DEPORTE = () => Math.random() < 0.4;
-
-
-
-const DIAS_DEL_AÑO = 365;
-
-const META = nicolas.peso - 3; 
-
-let dias = 0; 
-
-while (nicolas.peso > META) {
-    if (COME_MUCHO) {
-        AUMENTAR_PESO(nicolas);
-    } if (REALIZA_DEPORTE){
-        ADELGAZAR(nicolas);
-    }
-    dias += 1;
+let camilo = {
+    nombre: "Camilo",
+    apellido: "Valencia",
+    estatura: 1.80,
+    cantidadDeLibros: 60
 }
 
-console.log(`pasaron ${dias} dias para que ${nicolas.nombre} adelgazara 3KG`);
+let silvio = {
+    nombre: "Silvio",
+    apellido: "Valencia",
+    estatura: 1.82,
+    cantidadDeLibros: 70
+}
 
-*/
+let beatriz = {
+    nombre: "Beatriz",
+    apellido: "Molina",
+    estatura: 1.65,
+    cantidadDeLibros: 89
+}
 
-// let auto = {
-//     marca: "toyota",
-//     modelo: "corolla",
-//     annio: 2019,
-//     detalle: function() {
-//         console.log(`el auto es un ${this.marca} ${this.modelo} del año ${this.annio}`)
-//     }
-// }
+let julian = {
+    nombre: "Julian",
+    apellido: "Cañas",
+    estatura: 1.78,
+    cantidadDeLibros: 100
+}
 
+let personas = [nicolas, camilo, silvio, beatriz, julian];
 
-
-// function auto(marca, modelo, annio) {
-//     this.marca = marca; 
-//     this.model = modelo;
-//     this.annio = annio;
-// }
-
-// let autoNuevo = new auto ("volkswagen", "golf gti", 2020); 
-
-
-let articulos = [
-    {nombre: "bici", costo: 200},
-    {nombre: "macbook", costo: 1000},
-    {nombre: "monitor", costo: 500},
-    {nombre: "cargador", costo: 100},
-]; 
-
-// ---- filter
-/*
-let articulosFiltrados = articulos.filter(function(articulo){
-    return articulo.costo <= 400
-});
-
-*/
-
-// ---- map 
-/*
-let nombreArticulos = articulos.map(function(articulo) {
-    return articulo.nombre
-});
-*/
-
-// ---- find
-
-/*
-let buscarNombre = articulos.find(function(articulo){
-    return articulo.nombre === "macbook"
-})
-*/
-
-// ---- For each 
-/*
-articulos.forEach(function(articulo){
-    console.log(articulo.nombre)
-})
-*/
-
-// ---- some 
-/*
-let articulosValidos = articulos.some(function(articulo){
-    return articulo.costo <= 400
-})
-
-console.log(articulosValidos);
-
-*/
+const reducer = (acum, {cantidadDeLibros}) => acum + cantidadDeLibros
 
 
+let totalDeLibros = personas.reduce(reducer, 0) // como parametros recibe una función (reducer) y el valor inicla del acumulador (0).
+
+console.log(`en total todos tienen ${totalDeLibros} libros`);
