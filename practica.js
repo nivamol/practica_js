@@ -473,9 +473,20 @@ const esAlta = (personas) => {
 // console.log(personas[0]);
 // console.log(personasACms[0]); // Se creó otro array con la estatura en cms sin modificar el original en metros.
 
+// ---- Ejer 1
 
-let peso = prompt('ingrese su peso en kg:'), 
-    edad = prompt('ingrese su edad:')
+// let peso = prompt('ingrese su peso en kg:'), 
+//     edad = prompt('ingrese su edad:')
 
-document.write(`su peso es: ${peso}kg y su edad es: ${edad} `)
+// document.write(`su peso es: ${peso}kg y su edad es: ${edad} `)
 
+// ---- Ejer 2
+
+function calcularArea () {
+    let base = prompt('ingrese la base del triángulo:'),
+    altura = prompt('ingrese la altura del triangulo')
+    let area = base * altura; 
+    console.log(`el area del triángulo es ${area}`)
+}
+
+calcularArea();
