@@ -482,11 +482,23 @@ const esAlta = (personas) => {
 
 // ---- Ejer 2
 
-function calcularArea () {
-    let base = prompt('ingrese la base del triángulo:'),
-    altura = prompt('ingrese la altura del triangulo')
-    let area = base * altura; 
-    console.log(`el area del triángulo es ${area}`)
+// function calcularArea () {
+//     let base = prompt('ingrese la base del triángulo:'),
+//     altura = prompt('ingrese la altura del triangulo')
+//     let area = base * altura; 
+//     console.log(`el area del triángulo es ${area}`)
+// }
+
+// calcularArea();
+
+// ---- ejercicio 3 
+
+const pi = 3.14 
+let radio = prompt('introduce el radio del circulo')
+
+function areaCirculo() {
+    let area = pi * (radio * radio);
+    console.log(`el area del circulo es ${area}`);
 }
 
-calcularArea();
+areaCirculo();
