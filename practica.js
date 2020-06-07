@@ -505,14 +505,33 @@ const esAlta = (personas) => {
 
 // ---- Ejer 4
 
-let numeroUno = prompt('ingrese el primer número:')
-let numeroDos = prompt('ingrese el segundo número: ')
-let resultado
+// let numeroUno = prompt('ingrese el primer número:')
+// let numeroDos = prompt('ingrese el segundo número: ')
+// let resultado
 
-if (numeroUno > numeroDos) {
-    resultado = numeroUno / numeroDos
-    } else {
-        resultado = numeroDos / numeroUno
-    }
+// if (numeroUno > numeroDos) {
+//     resultado = numeroUno / numeroDos
+//     } else {
+//         resultado = numeroDos / numeroUno
+//     }
 
-console.log(resultado);
+// console.log(resultado);
+
+// ---- Ejer 5 
+
+let a = prompt('numero uno:'), 
+    b = prompt('numero dos:'), 
+    c = prompt('numero tres:')
+
+if (a > b || a > c) {
+    console.log(`el numero mayor es: ${a}`)
+} 
+else if (b > a || b > c) {
+    console.log(`el numero mayor es: ${b}`)
+} 
+else if (c > a || c > b) {
+    console.log(`el numero mayor es: ${c}`)
+} 
+else {
+    console.log('recargue la página e ingrese 3 números diferentes')
+}
