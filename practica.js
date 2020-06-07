@@ -491,14 +491,28 @@ const esAlta = (personas) => {
 
 // calcularArea();
 
-// ---- ejercicio 3 
+// ---- Ejer 3 
 
-const pi = 3.14 
-let radio = prompt('introduce el radio del circulo')
+// const pi = 3.14 
+// let radio = prompt('introduce el radio del circulo')
 
-function areaCirculo() {
-    let area = pi * (radio * radio);
-    console.log(`el area del circulo es ${area}`);
-}
+// function areaCirculo() {
+//     let area = pi * (radio * radio);
+//     console.log(`el area del circulo es ${area}`);
+// }
 
-areaCirculo();
+// areaCirculo();
+
+// ---- Ejer 4
+
+let numeroUno = prompt('ingrese el primer número:')
+let numeroDos = prompt('ingrese el segundo número: ')
+let resultado
+
+if (numeroUno > numeroDos) {
+    resultado = numeroUno / numeroDos
+    } else {
+        resultado = numeroDos / numeroUno
+    }
+
+console.log(resultado);
