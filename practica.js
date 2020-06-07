@@ -474,46 +474,11 @@ const esAlta = (personas) => {
 // console.log(personasACms[0]); // Se creó otro array con la estatura en cms sin modificar el original en metros.
 
 
-let nicolas = {
-    nombre: "Nicolás",
-    apellido: "Valencia",
-    estatura: 1.75,
-    cantidadDeLibros: 27
-};
-
-let camilo = {
-    nombre: "Camilo",
-    apellido: "Valencia",
-    estatura: 1.80,
-    cantidadDeLibros: 60
+function nombre() {
+    let apellido = 'nicolas'
+    function decirApellido() { // esto es un closure una función interna. 
+        return console.log(`tu apellido es ${apellido}`) // dentro de la función interna se puede acceder a la variable apellido de la función externa. 
+    }
+    console.log(decirApellido());
 }
 
-let silvio = {
-    nombre: "Silvio",
-    apellido: "Valencia",
-    estatura: 1.82,
-    cantidadDeLibros: 70
-}
-
-let beatriz = {
-    nombre: "Beatriz",
-    apellido: "Molina",
-    estatura: 1.65,
-    cantidadDeLibros: 89
-}
-
-let julian = {
-    nombre: "Julian",
-    apellido: "Cañas",
-    estatura: 1.78,
-    cantidadDeLibros: 100
-}
-
-let personas = [nicolas, camilo, silvio, beatriz, julian];
-
-const reducer = (acum, {cantidadDeLibros}) => acum + cantidadDeLibros
-
-
-let totalDeLibros = personas.reduce(reducer, 0) // como parametros recibe una función (reducer) y el valor inicla del acumulador (0).
-
-console.log(`en total todos tienen ${totalDeLibros} libros`);
