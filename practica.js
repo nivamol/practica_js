@@ -474,11 +474,8 @@ const esAlta = (personas) => {
 // console.log(personasACms[0]); // Se creó otro array con la estatura en cms sin modificar el original en metros.
 
 
-function nombre() {
-    let apellido = 'nicolas'
-    function decirApellido() { // esto es un closure una función interna. 
-        return console.log(`tu apellido es ${apellido}`) // dentro de la función interna se puede acceder a la variable apellido de la función externa. 
-    }
-    console.log(decirApellido());
-}
+let peso = prompt('ingrese su peso en kg:'), 
+    edad = prompt('ingrese su edad:')
+
+document.write(`su peso es: ${peso}kg y su edad es: ${edad} `)
 
