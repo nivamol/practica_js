@@ -519,19 +519,39 @@ const esAlta = (personas) => {
 
 // ---- Ejer 5 
 
-let a = prompt('numero uno:'), 
-    b = prompt('numero dos:'), 
-    c = prompt('numero tres:')
+// let a = prompt('numero uno:'), 
+//     b = prompt('numero dos:'), 
+//     c = prompt('numero tres:')
 
-if (a > b || a > c) {
-    console.log(`el numero mayor es: ${a}`)
+// if (a > b || a > c) {
+//     console.log(`el numero mayor es: ${a}`)
+// } 
+// else if (b > a || b > c) {
+//     console.log(`el numero mayor es: ${b}`)
+// } 
+// else if (c > a || c > b) {
+//     console.log(`el numero mayor es: ${c}`)
+// } 
+// else {
+//     console.log('recargue la página e ingrese 3 números diferentes')
+// }
+
+
+// ---- Ejer 6
+
+let dia = Number(prompt('ingrese el día de nacimiento:')),
+    mes = Number(prompt('ingrese el mes de nacimiento (En numero):')),
+    año = Number(prompt('ingrese el año de nacimiento:')),
+    error = "ingrese un dato valido"
+
+if( dia > 31 || dia === 0) {
+    console.log(error)
 } 
-else if (b > a || b > c) {
-    console.log(`el numero mayor es: ${b}`)
-} 
-else if (c > a || c > b) {
-    console.log(`el numero mayor es: ${c}`)
-} 
-else {
-    console.log('recargue la página e ingrese 3 números diferentes')
+else if (mes > 12 || mes < 1) {
+    console.log(error)
+}
+else if (año > 2010 || año < 1930) {
+    console.log(error)
+} else {
+    console.log(`usted nacio en el mes: ${mes}`)
 }
