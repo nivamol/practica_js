@@ -474,11 +474,24 @@ const esAlta = (personas) => {
 // console.log(personasACms[0]); // Se creó otro array con la estatura en cms sin modificar el original en metros.
 
 
-function nombre() {
-    let apellido = 'nicolas'
-    function decirApellido() { // esto es un closure una función interna. 
-        return console.log(`tu apellido es ${apellido}`) // dentro de la función interna se puede acceder a la variable apellido de la función externa. 
+
+
+
+
+class Persona { // aca remplazamos function por class y encerramos los parametros con la palabra constructor dentro de paréntesis.
+    constructor(nombre, apellido, altura) {
+        this.nombre = nombre; 
+        this.apellido = apellido;
+        this.altura = altura;
     }
-    console.log(decirApellido());
+
+    saludar() { // no hace falta la palabra function cuando se define dentro de una clase. 
+        console.log(`Hola ${nombre} ${apellido}`)
+    }
+
+    soyAlto() {
+        return persona.altura > 1.80
+    }
 }
 
+console.log(new Persona("nicolas", "valencia", 1.82, "camilo", "valencia", 1.78));
