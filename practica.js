@@ -494,4 +494,13 @@ class Persona { // aca remplazamos function por class y encerramos los parametro
     }
 }
 
-console.log(new Persona("nicolas", "valencia", 1.82, "camilo", "valencia", 1.78));
+class Desarrollador extends Persona{ // para heredar de otra clase(prototipo) usamos extends y el nombre de la clase.
+    constructor(nombre, apellido, altura) {
+        super(nombre, apellido, altura) // despues de super si podemos acceder a this.
+    } // al acceder al this nos da error porque hay que acceder al this del elemento padre (Persona).
+        // solo debemos agregar la palabra clave super y los parametros de Persona.
+
+    saludar() {
+        console.log(`hola me llamo ${nombre} ${apellido} y soy desarrollador/a`)
+    }
+}
