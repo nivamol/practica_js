@@ -474,33 +474,58 @@ const esAlta = (personas) => {
 // console.log(personasACms[0]); // Se creó otro array con la estatura en cms sin modificar el original en metros.
 
 
-
-
-
-
-class Persona { // aca remplazamos function por class y encerramos los parametros con la palabra constructor dentro de paréntesis.
-    constructor(nombre, apellido, altura) {
-        this.nombre = nombre; 
+class Persona {
+    constructor(nombre,apellido,altura) {
+        this.nombre = nombre;
         this.apellido = apellido;
         this.altura = altura;
     }
 
-    saludar() { // no hace falta la palabra function cuando se define dentro de una clase. 
-        console.log(`Hola ${nombre} ${apellido}`)
+    saludar(fn) { // escogemos el nombre que queramos para definir el parámetro. 
+        let {nombre, apellido} = this;
+        console.log(`Buen día ${nombre} ${apellido}`)
+        if (fn) { // si nos pasan una funcion en fn se ejecuta el siguiente código
+            fn(nombre, apellido, false) // nombre + paréntesis como si estuvieramos llamando la función.
+        } // si no nos pasan ningun dato en fn se toma como falsa y no se ejecuta nada. 
     }
 
     soyAlto() {
-        return persona.altura > 1.80
+        if(this.altura > 1.80) {
+            console.log(`${nombre} eres muy alto/a`)
+        }
     }
 }
 
-class Desarrollador extends Persona{ // para heredar de otra clase(prototipo) usamos extends y el nombre de la clase.
-    constructor(nombre, apellido, altura) {
-        super(nombre, apellido, altura) // despues de super si podemos acceder a this.
-    } // al acceder al this nos da error porque hay que acceder al this del elemento padre (Persona).
-        // solo debemos agregar la palabra clave super y los parametros de Persona.
+class Desarrollador extends Persona {
+    constructor(nombre,apellido,altura) {
+        super(nombre,apellido,altura)
+    }
 
-    saludar() {
-        console.log(`hola me llamo ${nombre} ${apellido} y soy desarrollador/a`)
+    saludar(fn) {
+        // let nombre = this.nombre;
+        // let apellido = this.apellido;
+        let {nombre, apellido} = this; // esto es equivalente a las 2 lineas de codigo anteriores.
+        console.log(`hola me llamo ${nombre} y soy desarrollador/a`)
+        if (fn) { // si nos pasan una funcion en fn se ejecuta el siguiente código
+            fn(nombre, apellido, true) // nombre + paréntesis como si estuvieramos llamando la función.
+        } 
     }
 }
+
+
+function responderSaludo(nombre, apellido, esDev) {
+    console.log(`Holiii ${nombre} ${apellido}`);
+    if(esDev) {
+        console.log(`${nombre} Me encanta que seas desarrollador/a`);
+    }
+}
+
+let nicolas = new Persona("nicolas", "valencia", 1.80);
+let erica = new Persona("erica", "valencia", 1.79);
+let arturo = new Persona("arturo", "valencia", 1.85);
+
+nicolas.saludar();
+erica.saludar(responderSaludo);
+arturo.saludar(responderSaludo);
+    
+
