@@ -474,58 +474,79 @@ const esAlta = (personas) => {
 // console.log(personasACms[0]); // Se creó otro array con la estatura en cms sin modificar el original en metros.
 
 
-class Persona {
-    constructor(nombre,apellido,altura) {
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.altura = altura;
-    }
+// class Persona {
+//     constructor(nombre,apellido,altura) {
+//         this.nombre = nombre;
+//         this.apellido = apellido;
+//         this.altura = altura;
+//     }
 
-    saludar(fn) { // escogemos el nombre que queramos para definir el parámetro. 
-        let {nombre, apellido} = this;
-        console.log(`Buen día ${nombre} ${apellido}`)
-        if (fn) { // si nos pasan una funcion en fn se ejecuta el siguiente código
-            fn(nombre, apellido, false) // nombre + paréntesis como si estuvieramos llamando la función.
-        } // si no nos pasan ningun dato en fn se toma como falsa y no se ejecuta nada. 
-    }
+//     saludar(fn) { // escogemos el nombre que queramos para definir el parámetro. 
+//         let {nombre, apellido} = this;
+//         console.log(`Buen día ${nombre} ${apellido}`)
+//         if (fn) { // si nos pasan una funcion en fn se ejecuta el siguiente código
+//             fn(nombre, apellido, false) // nombre + paréntesis como si estuvieramos llamando la función.
+//         } // si no nos pasan ningun dato en fn se toma como falsa y no se ejecuta nada. 
+//     }
 
-    soyAlto() {
-        if(this.altura > 1.80) {
-            console.log(`${nombre} eres muy alto/a`)
-        }
-    }
-}
+//     soyAlto() {
+//         if(this.altura > 1.80) {
+//             console.log(`${nombre} eres muy alto/a`)
+//         }
+//     }
+// }
 
-class Desarrollador extends Persona {
-    constructor(nombre,apellido,altura) {
-        super(nombre,apellido,altura)
-    }
+// class Desarrollador extends Persona {
+//     constructor(nombre,apellido,altura) {
+//         super(nombre,apellido,altura)
+//     }
 
-    saludar(fn) {
-        // let nombre = this.nombre;
-        // let apellido = this.apellido;
-        let {nombre, apellido} = this; // esto es equivalente a las 2 lineas de codigo anteriores.
-        console.log(`hola me llamo ${nombre} y soy desarrollador/a`)
-        if (fn) { // si nos pasan una funcion en fn se ejecuta el siguiente código
-            fn(nombre, apellido, true) // nombre + paréntesis como si estuvieramos llamando la función.
-        } 
-    }
-}
+//     saludar(fn) {
+//         // let nombre = this.nombre;
+//         // let apellido = this.apellido;
+//         let {nombre, apellido} = this; // esto es equivalente a las 2 lineas de codigo anteriores.
+//         console.log(`hola me llamo ${nombre} y soy desarrollador/a`)
+//         if (fn) { // si nos pasan una funcion en fn se ejecuta el siguiente código
+//             fn(nombre, apellido, true) // nombre + paréntesis como si estuvieramos llamando la función.
+//         } 
+//     }
+// }
 
 
-function responderSaludo(nombre, apellido, esDev) {
-    console.log(`Holiii ${nombre} ${apellido}`);
-    if(esDev) {
-        console.log(`${nombre} Me encanta que seas desarrollador/a`);
-    }
-}
+// function responderSaludo(nombre, apellido, esDev) {
+//     console.log(`Holiii ${nombre} ${apellido}`);
+//     if(esDev) {
+//         console.log(`${nombre} Me encanta que seas desarrollador/a`);
+//     }
+// }
 
-let nicolas = new Persona("nicolas", "valencia", 1.80);
-let erica = new Persona("erica", "valencia", 1.79);
-let arturo = new Persona("arturo", "valencia", 1.85);
+// let nicolas = new Persona("nicolas", "valencia", 1.80);
+// let erica = new Persona("erica", "valencia", 1.79);
+// let arturo = new Persona("arturo", "valencia", 1.85);
 
-nicolas.saludar();
-erica.saludar(responderSaludo);
-arturo.saludar(responderSaludo);
+// nicolas.saludar();
+// erica.saludar(responderSaludo);
+// arturo.saludar(responderSaludo);
     
 
+// ------------ Asincronismo
+
+console.log("a");
+
+// la funcion setTimeout permite definir en cuanto tiempo ejecutar una función. 
+// recibe 2 parámetros -> la función y el delay (tiempo para que se ejecute esa función)
+
+setTimeout(() => console.log("e"), 3000)
+// en caso de definir 0ms la d sigue apareciendo de último porque JS ejecuta primero lo principal y despues la cola de tareas.
+
+// en este ejemplo se imprimen primero a, b y c y después de 3s (3000ms) se muestra d en consola.
+
+setTimeout(() => console.log("d"), 2000)
+
+for(i = 0; i < 10; i++) {
+    console.log(i);
+}
+
+
+console.log("b");
+console.log("c");
