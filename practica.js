@@ -571,7 +571,22 @@ function generarPersonaje(id) {
 
 const ON_ERROR = id => console.log(`no pudimos identificar al personaje ${id}`)
 
-generarPersonaje(1) 
+
+let ids = [1, 2, 3, 4, 5, 6, 7]
+
+
+let promesas = ids.map(id => generarPersonaje(id))
+
+Promise
+    .all(promesas)
+    .then(persona => console.log(persona))
+    .catch(ON_ERROR)
+
+// let promesas = ids.map(function(id) {
+//     return generarPersonaje(id)
+// })
+
+/* generarPersonaje(1) 
     .then ((persona)  => {
         console.log(`el personaje 1 es ${persona.name}`);
         return generarPersonaje(2)
@@ -599,6 +614,6 @@ generarPersonaje(1)
 
 
     .catch(ON_ERROR)
-
+*/ 
 
 
