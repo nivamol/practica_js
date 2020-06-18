@@ -557,23 +557,28 @@ const PEOPLE_URL = 'people/:id';
 
 const opts = {crossDomain: true};
 
-function generarPersonaje(id, callback) {
-    const url = `${API_URL}${PEOPLE_URL.replace(':id', id)}`;
-    $.get (url, opts, onPeopleResponse = function (persona) {
-        console.log(`Hola, yo soy ${persona.name}`);
+function generarPersonaje(id) {
 
-        if(callback) {
-            callback()
-        }
+    return new Promise((resolve, reject) => {
+        const url = `${API_URL}${PEOPLE_URL.replace(':id', id)}`
+        $
+        .get (url, opts, function(data) {
+            resolve(data)
+        })
+        .fail(() => reject(id))
     })
 }
 
-generarPersonaje(1, function() {
-    generarPersonaje(2, function () {
-        generarPersonaje(3, function () {
-            generarPersonaje(4, function() {
-                generarPersonaje(5)
-            })
-        })
+function onError(id) {
+    console.log(`no pudimos identificar al personaje ${id}`)
+}
+
+generarPersonaje(1) 
+    .then (function(persona) {
+        console.log(`el personaje 1 es ${persona.name}`)
     })
-});
+
+    .catch(onError)
+
+
+
