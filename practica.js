@@ -531,22 +531,49 @@ const esAlta = (personas) => {
 
 // ------------ Asincronismo
 
-console.log("a");
+// console.log("a");
 
-// la funcion setTimeout permite definir en cuanto tiempo ejecutar una función. 
-// recibe 2 parámetros -> la función y el delay (tiempo para que se ejecute esa función)
+// // la funcion setTimeout permite definir en cuanto tiempo ejecutar una función. 
+// // recibe 2 parámetros -> la función y el delay (tiempo para que se ejecute esa función)
 
-setTimeout(() => console.log("e"), 3000)
-// en caso de definir 0ms la d sigue apareciendo de último porque JS ejecuta primero lo principal y despues la cola de tareas.
+// setTimeout(() => console.log("e"), 3000)
+// // en caso de definir 0ms la d sigue apareciendo de último porque JS ejecuta primero lo principal y despues la cola de tareas.
 
-// en este ejemplo se imprimen primero a, b y c y después de 3s (3000ms) se muestra d en consola.
+// // en este ejemplo se imprimen primero a, b y c y después de 3s (3000ms) se muestra d en consola.
 
-setTimeout(() => console.log("d"), 2000)
+// setTimeout(() => console.log("d"), 2000)
 
-for(i = 0; i < 10; i++) {
-    console.log(i);
+// for(i = 0; i < 10; i++) {
+//     console.log(i);
+// }
+
+
+// console.log("b");
+// console.log("c");
+
+
+const API_URL = 'https://swapi.dev/api/'; 
+const PEOPLE_URL = 'people/:id'; 
+
+const opts = {crossDomain: true};
+
+function generarPersonaje(id, callback) {
+    const url = `${API_URL}${PEOPLE_URL.replace(':id', id)}`;
+    $.get (url, opts, onPeopleResponse = function (persona) {
+        console.log(`Hola, yo soy ${persona.name}`);
+
+        if(callback) {
+            callback()
+        }
+    })
 }
 
-
-console.log("b");
-console.log("c");
+generarPersonaje(1, function() {
+    generarPersonaje(2, function () {
+        generarPersonaje(3, function () {
+            generarPersonaje(4, function() {
+                generarPersonaje(5)
+            })
+        })
+    })
+});
