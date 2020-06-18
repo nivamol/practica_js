@@ -569,16 +569,36 @@ function generarPersonaje(id) {
     })
 }
 
-function onError(id) {
-    console.log(`no pudimos identificar al personaje ${id}`)
-}
+const ON_ERROR = id => console.log(`no pudimos identificar al personaje ${id}`)
 
 generarPersonaje(1) 
-    .then (function(persona) {
-        console.log(`el personaje 1 es ${persona.name}`)
+    .then ((persona)  => {
+        console.log(`el personaje 1 es ${persona.name}`);
+        return generarPersonaje(2)
+    })
+    .then((persona) => {
+        console.log(`el personaje 2 es ${persona.name}`);
+        return generarPersonaje(3)
+    })
+    .then(persona => {
+        console.log(`el personaje 3 es ${persona.name}`)
+        return generarPersonaje(4)
+    })
+    .then(persona => {
+        console.log(`el persona 4 es ${persona.name}`)
+        return generarPersonaje(5)
+    })
+    .then(persona => {
+        console.log(`el persona 5 es ${persona.name}`)
+        return generarPersonaje(6)
+    })
+    .then(persona => {
+        console.log(`el persona 6 es ${persona.name}`)
+        return generarPersonaje(7)
     })
 
-    .catch(onError)
+
+    .catch(ON_ERROR)
 
 
 
