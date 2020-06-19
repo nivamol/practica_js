@@ -571,16 +571,20 @@ function generarPersonaje(id) {
 
 const ON_ERROR = id => console.log(`no pudimos identificar al personaje ${id}`)
 
+async function obtenerPersonajes() {
+    let ids = [1, 2, 3, 4, 5, 6, 7]
+    let promesas = ids.map(id => generarPersonaje(id))
+    try {
+        let personajes = await Promise.all(promesas)
+        console.log(personajes)
+    } catch(id) {
+        ON_ERROR(id)
+    }
+}
 
-let ids = [1, 2, 3, 4, 5, 6, 7]
 
+obtenerPersonajes()
 
-let promesas = ids.map(id => generarPersonaje(id))
-
-Promise
-    .all(promesas)
-    .then(persona => console.log(persona))
-    .catch(ON_ERROR)
 
 // let promesas = ids.map(function(id) {
 //     return generarPersonaje(id)
