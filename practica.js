@@ -552,72 +552,216 @@ const esAlta = (personas) => {
 // console.log("c");
 
 
-const API_URL = 'https://swapi.dev/api/'; 
-const PEOPLE_URL = 'people/:id'; 
+// const API_URL = 'https://swapi.dev/api/'; 
+// const PEOPLE_URL = 'people/:id'; 
 
-const opts = {crossDomain: true};
+// const opts = {crossDomain: true};
 
-function generarPersonaje(id) {
+// function generarPersonaje(id) {
 
-    return new Promise((resolve, reject) => {
-        const url = `${API_URL}${PEOPLE_URL.replace(':id', id)}`
-        $
-        .get (url, opts, function(data) {
-            resolve(data)
-        })
-        .fail(() => reject(id))
-    })
-}
+//     return new Promise((resolve, reject) => {
+//         const url = `${API_URL}${PEOPLE_URL.replace(':id', id)}`
+//         $
+//         .get (url, opts, function(data) {
+//             resolve(data)
+//         })
+//         .fail(() => reject(id))
+//     })
+// }
 
-const ON_ERROR = id => console.log(`no pudimos identificar al personaje ${id}`)
+// const ON_ERROR = id => console.log(`no pudimos identificar al personaje ${id}`)
 
-async function obtenerPersonajes() {
-    let ids = [1, 2, 3, 4, 5, 6, 7]
-    let promesas = ids.map(id => generarPersonaje(id))
-    try {
-        let personajes = await Promise.all(promesas)
-        console.log(personajes)
-    } catch(id) {
-        ON_ERROR(id)
-    }
-}
-
-
-obtenerPersonajes()
+// async function obtenerPersonajes() {
+//     let ids = [1, 2, 3, 4, 5, 6, 7]
+//     let promesas = ids.map(id => generarPersonaje(id))
+//     try {
+//         let personajes = await Promise.all(promesas)
+//         console.log(personajes)
+//     } catch(id) {
+//         ON_ERROR(id)
+//     }
+// }
 
 
-// let promesas = ids.map(function(id) {
-//     return generarPersonaje(id)
-// })
-
-/* generarPersonaje(1) 
-    .then ((persona)  => {
-        console.log(`el personaje 1 es ${persona.name}`);
-        return generarPersonaje(2)
-    })
-    .then((persona) => {
-        console.log(`el personaje 2 es ${persona.name}`);
-        return generarPersonaje(3)
-    })
-    .then(persona => {
-        console.log(`el personaje 3 es ${persona.name}`)
-        return generarPersonaje(4)
-    })
-    .then(persona => {
-        console.log(`el persona 4 es ${persona.name}`)
-        return generarPersonaje(5)
-    })
-    .then(persona => {
-        console.log(`el persona 5 es ${persona.name}`)
-        return generarPersonaje(6)
-    })
-    .then(persona => {
-        console.log(`el persona 6 es ${persona.name}`)
-        return generarPersonaje(7)
-    })
+// obtenerPersonajes()
 
 
-    .catch(ON_ERROR)
-*/ 
+// // let promesas = ids.map(function(id) {
+// //     return generarPersonaje(id)
+// // })
+
+// /* generarPersonaje(1) 
+//     .then ((persona)  => {
+//         console.log(`el personaje 1 es ${persona.name}`);
+//         return generarPersonaje(2)
+//     })
+//     .then((persona) => {
+//         console.log(`el personaje 2 es ${persona.name}`);
+//         return generarPersonaje(3)
+//     })
+//     .then(persona => {
+//         console.log(`el personaje 3 es ${persona.name}`)
+//         return generarPersonaje(4)
+//     })
+//     .then(persona => {
+//         console.log(`el persona 4 es ${persona.name}`)
+//         return generarPersonaje(5)
+//     })
+//     .then(persona => {
+//         console.log(`el persona 5 es ${persona.name}`)
+//         return generarPersonaje(6)
+//     })
+//     .then(persona => {
+//         console.log(`el persona 6 es ${persona.name}`)
+//         return generarPersonaje(7)
+//     })
+
+
+//     .catch(ON_ERROR)
+// */ 
+
+// const celeste = document.getElementById('celeste');
+// const violeta = document.getElementById('violeta');
+// const naranja = document.getElementById('naranja');
+// const verde = document.getElementById('verde');
+// const btmEmpezar = document.getElementById('btnEmpezar');// recibe un string con el elemento que queremos obtener (por el id)
+// const ULTIMO_NIVEL = 10;
+
+// class juego {
+//     constructor() {
+//         this.inicializar = this.inicializar.bind(this);
+//         this.inicializar()
+//         this.generarSecuencia()
+//         setTimeout(this.siguienteNivel, 500)
+//     }
+
+//     inicializar()  {
+//         this.siguienteNivel = this.siguienteNivel.bind(this);
+//         this.elegirColor = this.elegirColor.bind(this)
+//         this.toggleBtnEmpezar()
+//         this.nivel = 1;
+//         this.colores = {
+//             celeste,
+//             violeta,
+//             naranja,
+//             verde 
+//         }
+//     }
+
+//     toggleBtnEmpezar() {
+//         if(btmEmpezar.classList.contains('hide')) {
+//             btmEmpezar.classList.remove('hide')
+//         } else {
+//             btmEmpezar.classList.add('hide')
+//         }
+//     }
+
+//     generarSecuencia() {
+//         this.secuencia = new Array(ULTIMO_NIVEL).fill(0).map(n => Math.floor(Math.random() * 4))
+//     }
+
+//     siguienteNivel() {
+//         this.subnivel = 0;
+//         this.iluminarSecuencia()
+//         this.agregarEventosClick()
+//     }
+
+//     transformarNumeroAColor(numero) {
+//         switch (numero) {
+//             case 0: 
+//                 return 'celeste'
+//             case 1: 
+//                 return 'violeta'
+//             case 2: 
+//                 return 'naranja'
+//             case 3: 
+//                 return 'verde'
+
+//         }
+//     }
+
+//     transformarColorANumero(color) {
+//         switch (color) {
+//             case 'celeste': 
+//                 return 0
+//             case 'violeta': 
+//                 return 1
+//             case 'naranja': 
+//                 return 2
+//             case 'verde': 
+//                 return 3
+
+//         }
+//     }
+
+//     iluminarSecuencia() {
+//         for (let i = 0; i < this.nivel; i++) {
+//             const color = this.transformarNumeroAColor(this.secuencia[i])
+//             setTimeOut(() => this.iluminarColor(color), 1000 * i);
+//         }
+//     }
+
+//     iluminarColor() {
+//         this.colores[color].classList.add('light')
+//         setTimeout(() => this.apagarColor(color), 350)
+//     }
+
+//     apagarColor(color) {
+//         this.colores[color].classList.remove('light')
+//     }
+
+
+//     agregarEventosClick() {
+//         this.colores.celeste.addEventListener('click', this.elegirColor); // bind es para no perder la referencia de this. 
+//         this.colores.violeta.addEventListener('click', this.elegirColor);
+//         this.colores.naranja.addEventListener('click', this.elegirColor);
+//         this.colores.verde.addEventListener('click', this.elegirColor);
+//     }
+
+//     eliminarEventosClick() {
+//         this.colores.celeste.removeEventListener('click', this.elegirColor); // bind es para no perder la referencia de this. 
+//         this.colores.violeta.removeEventListener('click', this.elegirColor);
+//         this.colores.naranja.removeEventListener('click', this.elegirColor);
+//         this.colores.verde.removeEventListener('click', this.elegirColor);
+//     }
+
+//     elegirColor(ev) {
+//         const nombreColor = event.target.dataset.color
+//         const numeroColor = this.transformarColorANumero(nombreColor);
+//         this.iluminarColor(nombreColor)
+//         if (numeroColor === this.secuencia[this.subnivel]) {
+//             this.subnivel++
+//             if(this.subnivel === this.nivel) {
+//                 this.nivel++
+//                 this.eliminarEventosClick()
+//                 if(this.nivel === (ULTIMO_NIVEL + 1)) {
+//                     this.ganoElJuego()
+//                 } else {
+//                     setTimeout(this.siguienteNivel, 1500)
+//                 }
+
+//             }
+
+//         } else {
+//             this.perdioElJuego()
+//         }
+//     }
+//     ganoElJuego() {
+//         swal('Platzi', 'Felicitacions, Ganaste el juego!', 'success')
+//         .then(this.inicializar)
+//     }
+
+//     perdioElJuego() {
+//         swal('Platzi', 'Oooops, perdiste el juego!', 'error')
+//         .then(() => {
+//             this.eliminarEventosClick();
+//             this.inicializar();
+//         })
+//     }
+// }
+
+
+// function empezarJuego() {
+//     window.juego = new juego;
 
 
